@@ -1,0 +1,18 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Routing\Router;
+use MagedAhmad\Insular\Providers\RouteServiceProvider as ServiceProvider;
+
+class RouteServiceProvider extends ServiceProvider
+{
+    public function map(Router $router): void
+    {
+        $namespace = '{{controllers_namespace}}';
+        $routes = __DIR__.'/../Http/api.php';
+        $prefix = '{{prefix}}';
+
+        $this->loadRoutesFiles($router, $namespace, $routes, $prefix);
+    }
+}

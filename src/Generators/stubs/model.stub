@@ -1,0 +1,12 @@
+<?php
+
+namespace {{namespace}};
+
+use MagedAhmad\Insular\Traits\Snowflake;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class {{model}} extends Model
+{
+    use HasFactory, Snowflake;
+}

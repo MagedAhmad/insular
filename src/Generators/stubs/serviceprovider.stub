@@ -1,0 +1,35 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Translation\TranslationServiceProvider;
+
+class {{name}}ServiceProvider extends ServiceProvider
+{
+    public const MODULE_NAME = '{{name}}';
+
+    public function boot(): void
+    {
+        $this->loadMigrationsFrom([
+            dirname(__DIR__) . '/database/migrations'
+        ]);
+    }
+
+    public function register():void
+    {
+        $this->app->register(RouteServiceProvider::class);
+        $this->app->register(BroadcastServiceProvider::class);
+
+        $this->registerResources();
+    }
+
+    protected function registerResources(): void
+    {
+        $this->app->register(TranslationServiceProvider::class);
+
+        $this->loadTranslationsFrom(__DIR__ . "/../Lang", self::MODULE_NAME);
+        $this->loadViewsFrom(__DIR__ . "/../Views", self::MODULE_NAME);
+    }
+}

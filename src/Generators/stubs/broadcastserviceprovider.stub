@@ -1,0 +1,16 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Broadcast;
+
+class BroadcastServiceProvider extends ServiceProvider
+{
+    public function boot(): void
+    {
+        Broadcast::routes();
+
+        // require __DIR__.'/../routes/channels.php';
+    }
+}

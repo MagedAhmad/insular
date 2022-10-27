@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use Exception;
+
+class {{exception}} extends Exception
+{
+    public function render()
+    {
+        
+    }
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Routing\Controller;
+
+class {{controller}} extends Controller
+{
+
+}

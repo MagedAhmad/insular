@@ -1,0 +1,55 @@
+{
+    "name": "magedahmad/insular",
+    "description": "An architecture for scalable software.",
+    "keywords": [
+        "MagedAhmad",
+        "insular"
+    ],
+    "homepage": "",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Maged Ahmed",
+            "email": "maged.ahmedr@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "godruoyi/php-snowflake": "^2.0",
+        "illuminate/support": "^6.9|^7.0|^8.0|^9.0",
+        "spatie/laravel-data": "^1.0",
+        "spatie/laravel-translatable": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MagedAhmad\\Insular\\": "src"
+        },
+        "files" : [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MagedAhmad\\Insular\\InsularServiceProvider"
+            ],
+            "aliases": {
+                "Insular": "MagedAhmad\\Insular\\InsularFacade"
+            }
+        }
+    }
+}
