@@ -247,6 +247,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ## Credits
 
 -   [Maged Ahmed](https://github.com/MagedAhmad)
+-   [Osama Kamel](https://github.com/0samaKamel)
 
 ## License
 
